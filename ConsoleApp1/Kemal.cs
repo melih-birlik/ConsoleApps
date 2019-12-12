@@ -46,14 +46,32 @@ namespace ConsoleApp1
 
 
 
-            String urununcinsi;
             Console.WriteLine("Ürünün cinsini seçiniz");
-            urununcinsi = Console.ReadLine();
+            int urununcinsi = Convert.ToInt32(Console.ReadLine());
 
-            
+            switch (urununcinsi)
+            {
+                case 1 :
+                    Console.WriteLine("a");
+                    break;
+                case 2 :
+                    Console.WriteLine("b");
+                    break;
+
+                case 3:
+                    Console.WriteLine("c");
+                    break;
+
+                default:
+                    Console.WriteLine("Geçersiz bir değer girdiniz.");
+                    break;
+            }
+
+            Console.Read();
+
 
         }
-    
+
     }
     
 }
