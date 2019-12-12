@@ -41,11 +41,7 @@ namespace ConsoleApp1
             while (karakter.Key != ConsoleKey.Enter);
             Console.WriteLine();
             Console.WriteLine("Ürünün tonajı : " + sayi + "ton");
-            Console.ReadKey();
-
-
-
-
+       
             Console.WriteLine("Ürünün cinsini seçiniz");
             int urununcinsi = Convert.ToInt32(Console.ReadLine());
 
