@@ -55,6 +55,7 @@ namespace ConsoleApp1
                         Console.WriteLine("9-Üst Menüye Dön");
                         Console.WriteLine("0-Çıkış");
                         Console.Write("Seçiminiz:");
+                        string secim = Console.ReadLine();
                     }
                 }
 
