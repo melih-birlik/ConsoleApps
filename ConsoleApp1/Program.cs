@@ -10,7 +10,7 @@ namespace ConsoleApp1
             Console.WriteLine("Melih");
             Console.WriteLine("tugce");
             Console.WriteLine("Kemal");
-        
+       
     }
     }
 }
