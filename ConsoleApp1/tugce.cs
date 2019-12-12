@@ -4,8 +4,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class tugce
+    class Tugce
     {
-
     }
 }
