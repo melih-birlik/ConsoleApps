@@ -8,14 +8,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World222!");
-            Console.WriteLine("Melih");
-            Console.WriteLine("tugce");
-            Console.WriteLine("Kemal");
+          
+           // Kemal km = new Kemal();
+           // km.StartKemal();
 
-            Kemal km = new Kemal();
-            km.StartKemal();
-       
-    }
+            Tugce tt = new Tugce();
+            tt.StartTugce();
+        }
     }
 }
