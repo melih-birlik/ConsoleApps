@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public class Tugce
+namespace ConsoleApp1
 {
-	public Tugce()
-	{
-
-	}
+    class Tugce
+    {
+             
+    }
 }
