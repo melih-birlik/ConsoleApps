@@ -52,6 +52,7 @@ namespace ConsoleApp1
             Console.WriteLine("6-Mavi Haşhaş");
             Console.WriteLine("7-Anason");
             Console.WriteLine("8-Biberiye");
+            Console.WriteLine("9- Çıkış");
 
             int urununcinsi = Convert.ToInt32(Console.ReadLine());
             switch (urununcinsi)
@@ -82,13 +83,25 @@ namespace ConsoleApp1
                 case 8:
                     Console.WriteLine("Biberiye");
                     break;
+                case 9:
+                    Environment.Exit(0);
+                    break;
 
                 default:
                     Console.WriteLine("Geçersiz bir değer girdiniz.");
                     break;
             }
 
-            Console.Read();
+            Console.WriteLine("Ürüne yapılacak anaizleri seçiniz.");
+            Console.WriteLine("1-a");
+            Console.WriteLine("2-b");
+            Console.WriteLine("3-c");
+            Console.WriteLine("4-d");
+
+
+
+
+
 
 
         }
