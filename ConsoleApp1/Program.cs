@@ -9,11 +9,11 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
           
-           Kemal km = new Kemal();
-            km.StartKemal();
+         Kemal km = new Kemal();
+          km.StartKemal();
 
-          //  Tugce tt = new Tugce();
-           // tt.StartTugce();
+           // Tugce tt = new Tugce();
+            // tt.StartTugce();
         }
     }
 }
