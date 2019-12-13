@@ -96,7 +96,7 @@ namespace ConsoleApp1
                         }
                         if (sayi.Length > 6)
                         {
-                            Console.WriteLine("Tonaj en fazla 6 haneli olmalıdır. Lütfen tekrar giriniz:");
+                            Console.WriteLine("Tonaj en fazla 6 haneli olmalıdır. Lütfen tekrar giriniz: ");
                         }
                     }
                     else
