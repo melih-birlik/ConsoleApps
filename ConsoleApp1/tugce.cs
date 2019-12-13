@@ -57,19 +57,29 @@ namespace ConsoleApp1
                         Console.WriteLine("0-Çıkış");
                         Console.Write("Seçiminiz:");
                         string secim = Console.ReadLine();
+                        if (secim == "9")
+                            break;
+                        else if (secim == "0")
+                            Environment.Exit(0);
                     }
 
                 }
-
+                else if (menuSecim == "Ç")
+                {
+                    break;
+                }
                 else
                 {
-                    Console.WriteLine("Yanlış Seçim!!");
+                    Console.WriteLine("Yanlış Seçim");
                 }
 
                 Console.WriteLine("Hammadde Tonajını giriniz: ");
 
-                {
+                
                     ConsoleKeyInfo karakter;
+                do
+                {
+
 
 
                     karakter = Console.ReadKey(true);
@@ -84,6 +94,10 @@ namespace ConsoleApp1
                             sayi += karakter.KeyChar;
                             Console.Write(karakter.KeyChar);
                         }
+                        if (sayi.Length > 6)
+                        {
+                            Console.WriteLine("Tonaj en fazla 6 haneli olmalıdır. Lütfen tekrar giriniz: ");
+                        }
                     }
                     else
 
@@ -93,17 +107,18 @@ namespace ConsoleApp1
                             sayi = sayi.Substring(0, (sayi.Length - 1));
                             Console.Write("\b \b");
                         }
-
-
-                        while (karakter.Key != ConsoleKey.Enter) ;
-                        Console.WriteLine();
                     }
                 }
+
+                while (karakter.Key != ConsoleKey.Enter);
+                        Console.WriteLine();
+                    }
+                
                 
             }
         }
     }
-}
+
 
 
 
