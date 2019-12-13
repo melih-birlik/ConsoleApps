@@ -43,19 +43,44 @@ namespace ConsoleApp1
             Console.WriteLine("Ürünün tonajı : " + sayi + "ton");
        
             Console.WriteLine("Ürünün cinsini seçiniz");
-            int urununcinsi = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ürün Seçenekleri");
+            Console.WriteLine("1-Bilye Kekik");
+            Console.WriteLine("2-Sivri Kekik");
+            Console.WriteLine("3-Kimyon");
+            Console.WriteLine("4-Rezene");
+            Console.WriteLine("5-Ada Çayı");
+            Console.WriteLine("6-Mavi Haşhaş");
+            Console.WriteLine("7-Anason");
+            Console.WriteLine("8-Biberiye");
 
+            int urununcinsi = Convert.ToInt32(Console.ReadLine());
             switch (urununcinsi)
             {
                 case 1 :
-                    Console.WriteLine("a");
+                    Console.WriteLine("Bilye Kekik");
                     break;
                 case 2 :
-                    Console.WriteLine("b");
+                    Console.WriteLine("Sivri Kekik");
                     break;
 
                 case 3:
-                    Console.WriteLine("c");
+                    Console.WriteLine("Kimyon");
+                    break;
+
+                case 4:
+                    Console.WriteLine("Rezene");
+                    break;
+                case 5:
+                    Console.WriteLine("Adaçayı");
+                    break;
+                case 6:
+                    Console.WriteLine("Mavi Haşhaş");
+                    break;
+                case 7:
+                    Console.WriteLine("Anason");
+                    break;
+                case 8:
+                    Console.WriteLine("Biberiye");
                     break;
 
                 default:
