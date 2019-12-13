@@ -63,7 +63,7 @@ namespace ConsoleApp1
 
                 else
                 {
-                    Console.WriteLine("Yanlış Seçim");
+                    Console.WriteLine("Yanlış Seçim!!");
                 }
 
                 Console.WriteLine("Hammadde Tonajını giriniz: ");
