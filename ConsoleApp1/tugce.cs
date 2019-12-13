@@ -11,6 +11,7 @@ namespace ConsoleApp1
         {
             string HammaddeTonaj;
             string sayi = "";
+
             while (true)
             {
                 Console.WriteLine("------İşlemler ---------");
@@ -57,48 +58,71 @@ namespace ConsoleApp1
                         Console.Write("Seçiminiz:");
                         string secim = Console.ReadLine();
                     }
+
                 }
 
                 else
+                {
                     Console.WriteLine("Yanlış Seçim");
-            }
-        
-            Console.WriteLine("Hammadde Tonajını giriniz: ");
-            ConsoleKeyInfo karakter;
-            do
-            {
-                karakter = Console.ReadKey(true);
-
-                if (karakter.Key != ConsoleKey.Backspace)
-                {
-                    double val = 0;
-
-                    bool kontrol = double.TryParse(karakter.KeyChar.ToString(), out val);
-                    if (kontrol)
-                    {
-                        sayi += karakter.KeyChar;
-                        Console.Write(karakter.KeyChar);
-                    }
-                }
-                else
-
-                {
-                    if (karakter.Key == ConsoleKey.Backspace && sayi.Length > 0)
-                    {
-                        sayi = sayi.Substring(0, (sayi.Length - 1));
-                        Console.Write("\b \b");
-                    }
-
-                   
                 }
 
+                Console.WriteLine("Hammadde Tonajını giriniz: ");
+
+                {
+                    ConsoleKeyInfo karakter;
+
+
+                    karakter = Console.ReadKey(true);
+
+                    if (karakter.Key != ConsoleKey.Backspace)
+                    {
+                        double val = 0;
+
+                        bool kontrol = double.TryParse(karakter.KeyChar.ToString(), out val);
+                        if (kontrol)
+                        {
+                            sayi += karakter.KeyChar;
+                            Console.Write(karakter.KeyChar);
+                        }
+                    }
+                    else
+
+                    {
+                        if (karakter.Key == ConsoleKey.Backspace && sayi.Length > 0)
+                        {
+                            sayi = sayi.Substring(0, (sayi.Length - 1));
+                            Console.Write("\b \b");
+                        }
+
+
+                        while (karakter.Key != ConsoleKey.Enter) ;
+                        Console.WriteLine();
+                    }
+                }
+                
             }
-            while (karakter.Key != ConsoleKey.Enter);
-            Console.WriteLine();
         }
-        
-          
     }
-
 }
 
+
+
+                
+        
+        
+
+    
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+    
