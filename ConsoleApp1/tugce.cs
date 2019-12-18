@@ -33,11 +33,23 @@ namespace ConsoleApp1
                         Console.WriteLine("0-Çıkış");
                         Console.Write("Seçiminiz:");
                         string secim = Console.ReadLine();
-
+                        if (secim[0] == '1')
+                        {
+                            Console.WriteLine("A");
+                        }
+                        else if (secim[0] == '2')
+                        {
+                            Console.WriteLine("B");
+                        }
+                        else if (secim[0] == '3')
+                        {
+                            Console.WriteLine("C");
+                        }
                         if (secim == "9")
                             break;
                         else if (secim == "0")
                             Environment.Exit(0);
+
                     }
                 }
                 else if (menuSecim == "C")
@@ -57,6 +69,38 @@ namespace ConsoleApp1
                         Console.WriteLine("0-Çıkış");
                         Console.Write("Seçiminiz:");
                         string secim = Console.ReadLine();
+                        if (secim[0] == '1')
+                        {
+                            Console.WriteLine("Bilye Kekik");
+                        }
+                        else if (secim[0] == '2')
+                        {
+                            Console.WriteLine("Sivri Kekik");
+                        }
+                        else if (secim[0] == '3')
+                        {
+                            Console.WriteLine("Kimyon");
+                        }
+                        else if (secim[0] == '4')
+                        {
+                            Console.WriteLine("Rezene");
+                        }
+                        else if (secim[0] == '5')
+                        {
+                            Console.WriteLine("Ada Çayı");
+                        }
+                        else if (secim[0] == '6')
+                        {
+                            Console.WriteLine("Mavi Haşhaş");
+                        }
+                        else if (secim[0] == '7')
+                        {
+                            Console.WriteLine("Anason");
+                        }
+                        else if (secim[0] == '8')
+                        {
+                            Console.WriteLine("Biberiye");
+                        }
                         if (secim == "9")
                             break;
                         else if (secim == "0")
@@ -64,6 +108,7 @@ namespace ConsoleApp1
                     }
 
                 }
+
                 else if (menuSecim == "Ç")
                 {
                     break;
@@ -72,52 +117,54 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Yanlış Seçim");
                 }
+            }
 
-                Console.WriteLine("Hammadde Tonajını giriniz: ");
 
-                
-                    ConsoleKeyInfo karakter;
-                do
+            Console.WriteLine("Hammadde Tonajını giriniz: ");
+
+
+            ConsoleKeyInfo karakter;
+            do
+            {
+
+
+
+                karakter = Console.ReadKey(true);
+
+                if (karakter.Key != ConsoleKey.Backspace)
                 {
+                    double val = 0;
 
-
-
-                    karakter = Console.ReadKey(true);
-
-                    if (karakter.Key != ConsoleKey.Backspace)
+                    bool kontrol = double.TryParse(karakter.KeyChar.ToString(), out val);
+                    if (kontrol)
                     {
-                        double val = 0;
-
-                        bool kontrol = double.TryParse(karakter.KeyChar.ToString(), out val);
-                        if (kontrol)
-                        {
-                            sayi += karakter.KeyChar;
-                            Console.Write(karakter.KeyChar);
-                        }
-                        if (sayi.Length > 6)
-                        {
-                            Console.WriteLine("Tonaj en fazla 6 haneli olmalıdır. Lütfen tekrar giriniz: ");
-                        }
+                        sayi += karakter.KeyChar;
+                        Console.Write(karakter.KeyChar);
                     }
-                    else
-
+                    if (sayi.Length > 6)
                     {
-                        if (karakter.Key == ConsoleKey.Backspace && sayi.Length > 0)
-                        {
-                            sayi = sayi.Substring(0, (sayi.Length - 1));
-                            Console.Write("\b \b");
-                        }
+                        Console.WriteLine("Tonaj en fazla 6 haneli olmalıdır. Lütfen tekrar giriniz:");
                     }
                 }
+                else
 
-                while (karakter.Key != ConsoleKey.Enter);
-                        Console.WriteLine();
+                {
+                    if (karakter.Key == ConsoleKey.Backspace && sayi.Length > 0)
+                    {
+                        sayi = sayi.Substring(0, (sayi.Length - 1));
+                        Console.Write("\b \b");
                     }
-                
-                
+                }
             }
+
+            while (karakter.Key != ConsoleKey.Enter);
+            Console.WriteLine();
         }
+
     }
+
+}
+    
 
 
 

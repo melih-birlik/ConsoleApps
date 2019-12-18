@@ -10,10 +10,10 @@ namespace ConsoleApp1
         {
           
            //Kemal km = new Kemal();
-           // km.StartKemal();
+           //km.StartKemal();
 
-           Tugce tt = new Tugce();
-           tt.StartTugce();
+            Tugce tt = new Tugce();
+            tt.StartTugce();
         }
     }
 }
